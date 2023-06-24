@@ -1,0 +1,134 @@
+.home {
+  background-color: $PrimaryColor;
+  height: 100vh;
+
+  @media (max-width: 1200px) {
+    display: grid;
+    place-items: center;
+    padding-bottom: 50px;
+  }
+
+  &__titles {
+    max-width: 1700px;
+    padding-top: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    @media (min-width: 1400px) {
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: 1750px) {
+      justify-content: space-between;
+    }
+
+    &--title {
+      color: $SecondaryColor;
+      font-size: 85px;
+      font-weight: 600;
+
+      @media (max-width: 1200px) {
+        font-size: 50px;
+      }
+
+      p {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        border-right: 0.15em solid $SecondaryColor;
+        animation: typing 5s steps(38) 1s 1 normal both,
+          blink 0.3s steps(1) infinite;
+        padding-right: 20px;
+        animation-iteration-count: infinite;
+        margin-bottom: 10px;
+
+        @keyframes typing {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+
+        @keyframes blink {
+          50% {
+            border-color: transparent;
+          }
+        }
+      }
+    }
+
+    &--title:nth-of-type(2) {
+      display: none;
+
+      @media (min-width: 750px) {
+        display: inline-block;
+      }
+    }
+
+    &--title:nth-of-type(3) {
+      display: none;
+
+      @media (min-width: 1750px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__textInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+    color: $SecondaryColor;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+    @media (max-width: 1400px) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-weight: 400;
+      margin: 0 15px;
+
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 750px) {
+        font-size: 16px;
+      }
+    }
+
+    &--scroll {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media (max-width: 1400px) {
+        display: none;
+      }
+
+      &--text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+    }
+  }
+}

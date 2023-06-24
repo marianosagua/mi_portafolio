@@ -1,0 +1,172 @@
+.habilidades {
+  background-color: $PrimaryColor;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__items {
+    padding: 0 10px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    row-gap: 50px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      max-width: 700px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $SecondaryColor;
+
+    @media (max-width: 650px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__otros {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 30px;
+
+    @media (max-width: 1550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      place-items: center;
+      column-gap: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 1050px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(11, 1fr);
+    }
+
+    &--item {
+      border-radius: 40px;
+      box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+      -webkit-box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+      -moz-box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+      width: 477px;
+      height: 76px;
+      position: relative;
+
+      @media (max-width: 650px) {
+        width: 300px;
+        height: 50px;
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(9) {
+        p {
+          width: 95%;
+        }
+      }
+
+      p {
+        color: white;
+        font-size: 26px;
+        font-weight: 600;
+        padding: 25px 0;
+        padding-left: 30px;
+        border-radius: 40px;
+        cursor: pointer;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+        -webkit-box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+        -moz-box-shadow: 0px 1px 26px 0px $SecondaryColor inset;
+
+        @media (max-width: 650px) {
+          font-size: 16px;
+          padding-top: 15px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: $PrimaryColor;
+  border: 3px solid $SecondaryColor;
+  display: grid;
+  place-items: center;
+  border-radius: 40px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    width: 170px;
+    height: 170px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+
+    @media (max-width: 600px) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  p {
+    color: $SecondaryColor;
+    font-weight: 800;
+    margin-top: -25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  &__spanHoverDos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f5efdf;
+    bottom: -100%;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    border: 1px solid $PrimaryColor;
+
+    .gitHubIcon {
+      color: $PrimaryColor;
+      transition: 0.5s;
+    }
+
+    p {
+      color: $PrimaryColor;
+    }
+
+    .card__spanHoverDos {
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+}

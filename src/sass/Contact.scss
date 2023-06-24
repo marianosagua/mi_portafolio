@@ -1,0 +1,151 @@
+.contact {
+  background-color: $PrimaryColor;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+
+  @media (max-width: 1700px) {
+    padding: 0 50px;
+    padding-top: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
+  &__redes {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    &--circle {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: $SecondaryColor;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      margin: 20px;
+
+      @media (max-width: 750px) {
+        width: 140px;
+        height: 140px;
+      }
+
+      &:hover {
+        opacity: 0.5;
+        transition: ease-out 0.3s;
+      }
+
+      svg {
+        color: $PrimaryColor;
+      }
+    }
+  }
+
+  &__title {
+    width: 50%;
+    padding-left: 50px;
+
+    @media (max-width: 1700px) {
+      display: grid;
+      place-content: center;
+      margin: 0 20px;
+    }
+
+    @media (max-width: 1200px) {
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    @media (max-width: 750px) {
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 106px;
+      color: $SecondaryColor;
+      font-weight: 600;
+      max-width: 900px;
+      word-spacing: -10px;
+
+      @media (max-width: 1200px) {
+        font-size: 80px;
+      }
+
+      @media (max-width: 750px) {
+        font-size: 30px;
+        word-spacing: 0;
+      }
+    }
+  }
+
+  &__emailModal {
+    width: 500px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $SecondaryColor;
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75);
+    transition: ease-in-out 1s;
+
+    p:nth-of-type(2) {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    p:nth-of-type(1) {
+      font-size: 20px;
+      margin-bottom: 17px;
+      color: $PrimaryColor;
+    }
+
+    &--btn {
+      align-self: flex-end;
+      margin-top: -50px;
+      margin-right: 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.bi-arrow-up-circle-fill {
+  color: $SecondaryColor;
+}
+
+.bi-x-lg {
+  color: $PrimaryColor;
+}
+
+.emailIcon,
+.linkedinIcon {
+  @media (max-width: 750px) {
+    width: 80px;
+    height: 80px;
+  }
+}
