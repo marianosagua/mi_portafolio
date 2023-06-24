@@ -33,7 +33,7 @@ const AboutMe = () => {
         <img src={FotoPerfil} alt="Foto Perfil" />
 
         <a
-          href="https://drive.google.com/file/d/1NnG-tHaQQYMce8yy-fJYMYdk6Pb2R8S1/view?usp=sharing"
+          href="https://drive.google.com/file/d/1UdicX-SMp2K2GP2QkLsMCTuEMQhvG_ib/view?usp=sharing"
           className="aboutMe__profile--cv"
           target="__blank"
         >
