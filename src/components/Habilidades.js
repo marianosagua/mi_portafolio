@@ -12,6 +12,7 @@ import GitIcon from "../images/Git_Icon.png";
 import FirebaseIcon from "../images/Firebase_Icon.jpg";
 import AndroidStudio from "../images/AndroidStudio_Icon.png";
 import ResponsiveDesign from "../images/ResponsiveDesign_Icon.png";
+import VercelIcon from "../images/Vercel_Icon.png";
 
 const Habilidades = () => {
   const [refOne, inView] = useInView({
@@ -26,7 +27,7 @@ const Habilidades = () => {
 
   return (
     <div className="habilidades" id="habilidades" ref={refOne}>
-      <h2 className="habilidades__title">Habilidades Tecnicas</h2>
+      <h2 className="habilidades__title">Tecnologias</h2>
 
       <section className="habilidades__items">
         <div
@@ -150,6 +151,16 @@ const Habilidades = () => {
           <span className="card__spanHoverDos"></span>
           <img src={FirebaseIcon} alt="FIREBASE Icon" />
           <p>FIREBASE</p>
+        </div>
+
+        <div
+          className={
+            inView ? "card  animate__animated animate__fadeInDown" : "card"
+          }
+        >
+          <span className="card__spanHoverDos"></span>
+          <img src={VercelIcon} alt="Vercel Icon" />
+          <p>Vercel</p>
         </div>
       </section>
 
