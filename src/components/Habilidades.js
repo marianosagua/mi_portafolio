@@ -7,6 +7,7 @@ import SassIcon from "../images/Sass_Icon.png";
 import JavaScriptIcon from "../images/JavaScript_Icon.png";
 import ReactIcon from "../images/React_Icon.png";
 import ReactNativeIcon from "../images/React_Icon.png";
+import BootstrapIcon from "../images/Bootstrap_Icon.png";
 import ReduxIcon from "../images/Redux_Icon.png";
 import GitIcon from "../images/Git_Icon.png";
 import FirebaseIcon from "../images/Firebase_Icon.jpg";
@@ -108,6 +109,16 @@ const Habilidades = () => {
           <span className="card__spanHoverDos"></span>
           <img src={ReactNativeIcon} alt="REACT NATIVE Icon" />
           <p>REACT NATIVE</p>
+        </div>
+
+        <div
+          className={
+            inView ? "card  animate__animated animate__fadeInDown" : "card"
+          }
+        >
+          <span className="card__spanHoverDos"></span>
+          <img src={BootstrapIcon} alt="Bootstrap Icon" />
+          <p>BOOTSTRAP</p>
         </div>
 
         <div
