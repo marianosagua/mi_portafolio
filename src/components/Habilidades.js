@@ -97,16 +97,6 @@ const Habilidades = () => {
           }
         >
           <span className="card__spanHoverDos"></span>
-          <img src={ReduxIcon} alt="REDUX Icon" />
-          <p>REDUX</p>
-        </div>
-
-        <div
-          className={
-            inView ? "card  animate__animated animate__fadeInDown" : "card"
-          }
-        >
-          <span className="card__spanHoverDos"></span>
           <img src={ReactNativeIcon} alt="REACT NATIVE Icon" />
           <p>REACT NATIVE</p>
         </div>
@@ -117,8 +107,8 @@ const Habilidades = () => {
           }
         >
           <span className="card__spanHoverDos"></span>
-          <img src={BootstrapIcon} alt="Bootstrap Icon" />
-          <p>BOOTSTRAP</p>
+          <img src={FirebaseIcon} alt="FIREBASE Icon" />
+          <p>FIREBASE</p>
         </div>
 
         <div
@@ -127,8 +117,8 @@ const Habilidades = () => {
           }
         >
           <span className="card__spanHoverDos"></span>
-          <img src={AndroidStudio} alt="ANDROID STUDIO Icon" />
-          <p>ANDROID STUDIO</p>
+          <img src={BootstrapIcon} alt="Bootstrap Icon" />
+          <p>BOOTSTRAP</p>
         </div>
 
         <div
@@ -152,26 +142,6 @@ const Habilidades = () => {
             className="gitHubIcon"
           />
           <p>GIT HUB</p>
-        </div>
-
-        <div
-          className={
-            inView ? "card  animate__animated animate__fadeInDown" : "card"
-          }
-        >
-          <span className="card__spanHoverDos"></span>
-          <img src={FirebaseIcon} alt="FIREBASE Icon" />
-          <p>FIREBASE</p>
-        </div>
-
-        <div
-          className={
-            inView ? "card  animate__animated animate__fadeInDown" : "card"
-          }
-        >
-          <span className="card__spanHoverDos"></span>
-          <img src={VercelIcon} alt="Vercel Icon" />
-          <p>Vercel</p>
         </div>
       </section>
 
