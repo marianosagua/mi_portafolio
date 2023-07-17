@@ -1,5 +1,18 @@
-import React from 'react'
-import { arrowUpIcon } from '../assets/Icons'
+import React from "react";
+import { arrowUpIcon } from "../assets/Icons";
+
+const scrollToTop = () => {
+  const scrollToTopAnimation = () => {
+    const currentPosition = window.scrollY;
+
+    if (currentPosition > 0) {
+      window.scrollTo(0, currentPosition - 80);
+      window.requestAnimationFrame(scrollToTopAnimation);
+    }
+  };
+
+  window.requestAnimationFrame(scrollToTopAnimation);
+};
 
 const Footer = () => {
   return (
@@ -17,11 +30,11 @@ const Footer = () => {
 
       <p>@2023</p>
 
-      <button onClick={() => window.scrollTo(0, 0)} className="footer__btn">
+      <button onClick={scrollToTop} className="footer__btn">
         {arrowUpIcon}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
