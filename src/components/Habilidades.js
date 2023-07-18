@@ -97,6 +97,16 @@ const Habilidades = () => {
           }
         >
           <span className="card__spanHoverDos"></span>
+          <img src={ReactIcon} alt="REACT Icon" />
+          <p>REACT NATIVE</p>
+        </div>
+
+        <div
+          className={
+            inView ? "card  animate__animated animate__fadeInDown" : "card"
+          }
+        >
+          <span className="card__spanHoverDos"></span>
           <img src={FirebaseIcon} alt="FIREBASE Icon" />
           <p>FIREBASE</p>
         </div>
