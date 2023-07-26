@@ -61,8 +61,8 @@ const Projects = () => {
   return (
     <div className="projects" id="projects">
       <section>
-        <ParallaxText baseVelocity={20}>-Proyectos</ParallaxText>
-        <ParallaxText baseVelocity={20}>-Programacion WEB</ParallaxText>
+        <ParallaxText baseVelocity={20}>-Software</ParallaxText>
+        <ParallaxText baseVelocity={20}>-Desarrollo</ParallaxText>
       </section>
 
       <section className="projects__table">

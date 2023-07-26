@@ -6,14 +6,11 @@ import CssIcon from "../images/CSS_Icon.png";
 import SassIcon from "../images/Sass_Icon.png";
 import JavaScriptIcon from "../images/JavaScript_Icon.png";
 import ReactIcon from "../images/React_Icon.png";
-import ReactNativeIcon from "../images/React_Icon.png";
 import BootstrapIcon from "../images/Bootstrap_Icon.png";
-import ReduxIcon from "../images/Redux_Icon.png";
 import GitIcon from "../images/Git_Icon.png";
 import FirebaseIcon from "../images/Firebase_Icon.jpg";
-import AndroidStudio from "../images/AndroidStudio_Icon.png";
 import ResponsiveDesign from "../images/ResponsiveDesign_Icon.png";
-import VercelIcon from "../images/Vercel_Icon.png";
+import PostmanIcon from "../images/Postman_Icon.png";
 
 const Habilidades = () => {
   const [refOne, inView] = useInView({
@@ -142,6 +139,16 @@ const Habilidades = () => {
             className="gitHubIcon"
           />
           <p>GIT HUB</p>
+        </div>
+
+        <div
+          className={
+            inView ? "card  animate__animated animate__fadeInDown" : "card"
+          }
+        >
+          <span className="card__spanHoverDos"></span>
+          <img src={PostmanIcon} alt="Postman Icon" />
+          <p>POSTMAN</p>
         </div>
       </section>
 
