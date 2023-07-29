@@ -18,7 +18,7 @@ const AboutMe = () => {
         }
       >
         <p>
-          Soy programador web con especializacion en tecnologias como html, css,
+          Soy desarrollador de software con especializacion en tecnologias como html, css,
           sass, javascript, react js, react native, firebase, git, git hub,
           postman, me gusta mucho y me siento muy comodo trabajando en este
           sector, llevo ya algunos años trabajando con las distintas tecnologias

@@ -8,31 +8,31 @@ const Home = () => {
         <div className="home__titles--title">
           <p>Mariano</p>
           <p>Sagua</p>
-          <p>Programador</p>
-          <p>Web</p>
+          <p>Software</p>
+          <p>Developer</p>
           <p>@2023</p>
         </div>
 
         <div className="home__titles--title">
           <p>Mariano</p>
           <p>Sagua</p>
-          <p>Programador</p>
-          <p>Web</p>
+          <p>Software</p>
+          <p>Developer</p>
           <p>@2023</p>
         </div>
 
         <div className="home__titles--title">
           <p>Mariano</p>
           <p>Sagua</p>
-          <p>Programador</p>
-          <p>Web</p>
+          <p>Software</p>
+          <p>Developer</p>
           <p>@2023</p>
         </div>
       </section>
 
       <section className="home__textInfo">
         <h3>Buenos Aires, Argentina</h3>
-        <h3>Programador Web</h3>
+        <h3>Software Developer</h3>
         <h3 className="home__textInfo--scroll">
           <div>
             <SouthIcon fontSize="lg" />

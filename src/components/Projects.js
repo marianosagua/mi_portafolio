@@ -62,7 +62,7 @@ const Projects = () => {
     <div className="projects" id="projects">
       <section>
         <ParallaxText baseVelocity={20}>-Software</ParallaxText>
-        <ParallaxText baseVelocity={20}>-Desarrollo</ParallaxText>
+        <ParallaxText baseVelocity={20}>-Developer</ParallaxText>
       </section>
 
       <section className="projects__table">
