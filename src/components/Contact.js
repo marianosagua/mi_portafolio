@@ -13,7 +13,7 @@ const Contact = () => {
 
       <div className="contact__links">
         <a
-          href="https://drive.google.com/file/d/1KnfP-jEEDsSsZRTWNntCqJek2O9xeyQ1/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ivicZwqHXpcat-Hb5ShzrKoNZeDtTXw1/view?usp=sharing"
           target="_blanck"
         >
           Curriculum
