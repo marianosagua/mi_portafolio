@@ -67,40 +67,31 @@ const Projects = () => {
 
       <section className="projects__table">
         <div className="projects__table--rowTitles">
-          <h5>Proyectos</h5>
-          <h5>Tecnologias Usadas</h5>
-          <h5>Links</h5>
+          <h5>Proyecto</h5>
+          <h5>Caracteristicas</h5>
+          <h5>Link</h5>
         </div>
 
         <div className="projects__table--rowProject">
           <span className="spanHover"></span>
 
           <h6>
-            Stargames{" "}
+            Stargames
             <span>
-              {" "}
-              *E-commerce de productos del ambito de videojuegos donde podes
-              agregar productos al carrito, simular una compra, contiene
-              paginacion, filtros de productos, enrutamiento, login y
-              autenficacion de usuario.{" "}
+              <a href="https://star-games-store.vercel.app/" target="_blanck">
+                {boxArrow}
+              </a>
             </span>
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>HTML</p>
-            <p>SASS</p>
-            <p>JS</p>
-            <p>React JS</p>
+            <p>E-commerce</p>
+            <p>Sass</p>
+            <p>React</p>
             <p>Firebase</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a
-              href="https://github.com/MarianoSagua/star_games_store"
-              target="_blanck"
-            >
-              {githubIcon}
-            </a>
             <a href="https://star-games-store.vercel.app/" target="_blanck">
               {boxArrow}
             </a>
@@ -110,18 +101,19 @@ const Projects = () => {
         <div className="projects__table--rowProject">
           <span className="spanHover"></span>
           <h6>
-            Pokedex App Mobile{" "}
+            Pokedex{" "}
             <span>
-              {" "}
-              *App para celulares que muestra una pokedex de pokemones y en
-              donde se pueden agregar favoritos y ademas tiene login y
-              autentificacion de usuario.{" "}
+              <a
+                href="https://github.com/MarianoSagua/app_mobile_pokedex"
+                target="_blanck"
+              >
+                {githubIcon}
+              </a>
             </span>{" "}
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>HTML</p>
-            <p>JS</p>
+            <p>Mobile</p>
             <p>React Native</p>
             <p>Android Studio</p>
             <p>Firebase</p>
@@ -143,29 +135,20 @@ const Projects = () => {
           <h6>
             Memo Test{" "}
             <span>
-              {" "}
-              *Clasico juego de memorizacion en donde se te asignaran 16 cartas
-              dadas vueltas y tendras que hacer que coincidan todas para
-              completar el juego. Tambien podras crear tu usuario para poder ver
-              tus estadisticas.{" "}
-            </span>
+              <a href="https://memory-test-app.vercel.app/" target="_blanck">
+                {boxArrow}
+              </a>
+            </span>{" "}
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>HTML</p>
-            <p>SASS</p>
-            <p>JS</p>
-            <p>React JS</p>
+            <p>Game</p>
+            <p>Sass</p>
+            <p>React</p>
             <p>Firebase</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a
-              href="https://github.com/MarianoSagua/memory_test_app"
-              target="_blanck"
-            >
-              {githubIcon}
-            </a>
             <a href="https://memory-test-app.vercel.app/" target="_blanck">
               {boxArrow}
             </a>

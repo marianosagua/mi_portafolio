@@ -71,8 +71,6 @@ const Menu = () => {
               </a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
-
-              <p>@2023</p>
             </div>
           </section>
         </div>
@@ -113,8 +111,6 @@ const Menu = () => {
               </a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
-
-              <p>@2023</p>
             </div>
           </section>
         </div>

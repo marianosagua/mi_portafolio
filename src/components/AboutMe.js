@@ -18,12 +18,12 @@ const AboutMe = () => {
         }
       >
         <p>
-          Soy desarrollador de software con especializacion en tecnologias como html, css,
-          sass, javascript, react js, react native, firebase, git, git hub,
-          postman, me gusta mucho y me siento muy comodo trabajando en este
-          sector, llevo ya algunos años trabajando con las distintas tecnologias
-          del desarollo web y por eso siento que estoy muy capacitado para
-          ejercer cualquier trabajo referido a esta area, siempre estoy abierto a
+          Soy desarrollador de software con especializacion en tecnologias como
+          html, css, sass, javascript, react, react native, firebase, git, git
+          hub, me gusta mucho y me siento muy comodo trabajando en este sector,
+          llevo ya algunos años trabajando con las distintas tecnologias del
+          desarollo web y por eso siento que estoy muy capacitado para ejercer
+          cualquier trabajo referido a esta area, siempre estoy abierto a
           aprender nuevas cosas, a trabajar en equipo y soy una persona que
           siempre voy a intentar hacer mi trabajo de la mejor manera posible.
         </p>
@@ -32,13 +32,13 @@ const AboutMe = () => {
       <section className="aboutMe__profile">
         <img src={FotoPerfil} alt="Foto Perfil" />
 
-        <a
+        {/* <a
           href="https://drive.google.com/file/d/1KnfP-jEEDsSsZRTWNntCqJek2O9xeyQ1/view?usp=sharing"
           className="aboutMe__profile--cv"
           target="__blank"
         >
           CV
-        </a>
+        </a> */}
       </section>
     </div>
   );

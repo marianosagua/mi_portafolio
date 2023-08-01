@@ -13,6 +13,11 @@
       font-size: 20px;
     }
 
+    @media (max-width: 1100px) {
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+
     &--rowTitles {
       display: grid;
       grid-template-columns: 1fr 2.2fr 0.3fr;
@@ -55,14 +60,14 @@
     }
 
     &--rowProject {
-      cursor: pointer;
+      cursor: default;
       display: grid;
       grid-template-columns: 1fr 2.2fr 0.3fr;
       grid-template-rows: 1fr;
       column-gap: 20px;
       place-items: center;
       border-bottom: 1px solid $SecondaryColor;
-      padding: 40px 0;
+      padding: 25px 0;
       position: relative;
       overflow: hidden;
       transition: 0.5s;
@@ -88,9 +93,19 @@
           font-size: 28px;
         }
 
+        @media (max-width: 1100px) {
+          padding: 0;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+
         span {
-          font-size: 15px;
-          margin-top: 15px;
+          display: none;
+
+          @media (max-width: 1100px) {
+            display: block;
+          }
         }
       }
 
@@ -107,15 +122,32 @@
         }
 
         @media (max-width: 1100px) {
-          padding-left: 20px;
+          padding: 0;
           margin: 30px 0;
+          margin-bottom: 0;
+          margin-top: 10px;
+
+          p:nth-of-type(1) {
+            margin-left: 0;
+          }
+        }
+
+        @media (max-width: 700px) {
+          p:nth-of-type(4) {
+            margin-left: 0;
+          }
+        }
+
+        @media (max-width: 550px) {
+          p:nth-of-type(3) {
+            margin-left: 0;
+          }
         }
 
         p {
           border: 1px solid $SecondaryColor;
           padding: 10px 20px;
           border-radius: 30px;
-          margin-right: 10px;
           color: $SecondaryColor;
           font-size: 28px;
           font-weight: 550;
@@ -138,7 +170,7 @@
         }
 
         @media (max-width: 1100px) {
-          padding-left: 20px;
+          display: none;
         }
       }
 

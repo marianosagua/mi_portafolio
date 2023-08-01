@@ -17,18 +17,15 @@ const scrollToTop = () => {
 const Footer = () => {
   return (
     <div className="footer">
-      <a
-        href="https://www.linkedin.com/in/mariano-sagua-49785923b/"
-        target="_blanck"
-      >
-        LINKEDIN
-      </a>
+      <button onClick={scrollToTop} className="footer__btn">
+        {arrowUpIcon}
+      </button>
 
-      <a href="https://github.com/MarianoSagua" target="_blanck">
-        GIT HUB
-      </a>
-
-      <p>@2023</p>
+      <div className="footer__titles">
+        <p>Mariano Sagua</p>
+        <p>Software Developer</p>
+        <p>2023</p>
+      </div>
 
       <button onClick={scrollToTop} className="footer__btn">
         {arrowUpIcon}
