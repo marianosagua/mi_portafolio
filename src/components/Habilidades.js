@@ -69,7 +69,7 @@ const Habilidades = () => {
               : "habilidades__items--item"
           }
         >
-          <p>React Native</p>
+          <p>Redux</p>
         </div>
         <div
           className={

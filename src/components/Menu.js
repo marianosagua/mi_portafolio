@@ -48,17 +48,17 @@ const Menu = () => {
                 Home <span>{arrowLeft}</span>{" "}
               </h2>
 
-              <h2 onClick={() => irAlLink("aboutMe")}>
+              {/* <h2 onClick={() => irAlLink("aboutMe")}>
                 Sobre Mi <span>{arrowLeft}</span>
-              </h2>
+              </h2> */}
 
               <h2 onClick={() => irAlLink("habilidades")}>
                 Habilidades <span>{arrowLeft}</span>
               </h2>
 
-              <h2 onClick={() => irAlLink("projects")}>
+              {/* <h2 onClick={() => irAlLink("projects")}>
                 Proyectos <span>{arrowLeft}</span>
-              </h2>
+              </h2> */}
 
               <h2 onClick={() => irAlLink("contact")}>
                 Contacto <span>{arrowLeft}</span>
@@ -88,17 +88,17 @@ const Menu = () => {
                 Home <span>{arrowLeft}</span>{" "}
               </h2>
 
-              <h2 onClick={() => irAlLink("aboutMe")}>
+              {/* <h2 onClick={() => irAlLink("aboutMe")}>
                 Sobre Mi <span>{arrowLeft}</span>
-              </h2>
+              </h2> */}
 
               <h2 onClick={() => irAlLink("habilidades")}>
                 Habilidades <span>{arrowLeft}</span>
               </h2>
 
-              <h2 onClick={() => irAlLink("projects")}>
+              {/* <h2 onClick={() => irAlLink("projects")}>
                 Proyectos <span>{arrowLeft}</span>
-              </h2>
+              </h2> */}
 
               <h2 onClick={() => irAlLink("contact")}>
                 Contacto <span>{arrowLeft}</span>
