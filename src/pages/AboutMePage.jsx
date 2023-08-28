@@ -1,8 +1,7 @@
-import React from "react";
 import FotoPerfil from "../images/FotoPerfil.jpg";
 import { useInView } from "react-intersection-observer";
 
-const AboutMe = () => {
+export const AboutMePage = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -43,5 +42,3 @@ const AboutMe = () => {
     </div>
   );
 };
-
-export default AboutMe;

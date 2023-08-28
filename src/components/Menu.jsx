@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { arrowLeft, closeIcon } from "../assets/Icons";
 
-const Menu = () => {
+export const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [flag, setFlag] = useState(0);
 
@@ -120,5 +120,3 @@ const Menu = () => {
     </div>
   );
 };
-
-export default Menu;

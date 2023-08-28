@@ -1,7 +1,6 @@
-import React from "react";
 import { useInView } from "react-intersection-observer";
 
-const Habilidades = () => {
+export const HabilidadesPage = () => {
   const [refOne, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -42,7 +41,7 @@ const Habilidades = () => {
               : "habilidades__items--item"
           }
         >
-          <p>Sass</p>
+          <p>SASS</p>
         </div>
         <div
           className={
@@ -210,5 +209,3 @@ const Habilidades = () => {
     </div>
   );
 };
-
-export default Habilidades;

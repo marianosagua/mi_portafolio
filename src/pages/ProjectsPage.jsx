@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import {
   motion,
   useScroll,
@@ -57,7 +57,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   );
 }
 
-const Projects = () => {
+export const ProjectsPage = () => {
   return (
     <div className="projects" id="projects">
       <section>
@@ -158,5 +158,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;

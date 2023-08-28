@@ -1,8 +1,7 @@
-import React from "react";
 import SouthIcon from "@mui/icons-material/South";
 import { TbPointFilled } from "react-icons/tb";
 
-const Home = () => {
+export const HomePage = () => {
   return (
     <div className="homeApp" id="home">
       <section className="homeApp__titles">
@@ -102,6 +101,7 @@ const Home = () => {
             </h3>
           </div>
         </div>
+        
         <div className="homeApp__responsive--item">
           <div className="homeApp__responsive--item--itemUno">
             <div className="containerText">
@@ -134,6 +134,7 @@ const Home = () => {
             </h3>
           </div>
         </div>
+
         <div className="homeApp__responsive--item">
           <div className="homeApp__responsive--item--itemUno">
             <div className="containerText">
@@ -170,5 +171,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

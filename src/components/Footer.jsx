@@ -1,4 +1,3 @@
-import React from "react";
 import { arrowUpIcon } from "../assets/Icons";
 
 const scrollToTop = () => {
@@ -14,7 +13,7 @@ const scrollToTop = () => {
   window.requestAnimationFrame(scrollToTopAnimation);
 };
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer">
       <button onClick={scrollToTop} className="footer__btn">
@@ -33,5 +32,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;
