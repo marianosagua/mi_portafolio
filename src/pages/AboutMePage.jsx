@@ -31,13 +31,9 @@ export const AboutMePage = () => {
       <section className="aboutMe__profile">
         <img src={FotoPerfil} alt="Foto Perfil" />
 
-        {/* <a
-          href="https://drive.google.com/file/d/1KnfP-jEEDsSsZRTWNntCqJek2O9xeyQ1/view?usp=sharing"
-          className="aboutMe__profile--cv"
-          target="__blank"
-        >
+        <a href="#" className="aboutMe__profile--cv" target="__blank">
           CV
-        </a> */}
+        </a>
       </section>
     </div>
   );

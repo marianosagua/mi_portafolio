@@ -50,7 +50,7 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>JavaScript</p>
+          <p>Bootstrap</p>
         </div>
         <div
           className={
@@ -59,7 +59,25 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>React</p>
+          <p>Tailwind CSS</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>Javascript</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>React.js</p>
         </div>
         <div
           className={
@@ -96,6 +114,33 @@ export const HabilidadesPage = () => {
           }
         >
           <p>Git Hub</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>Node.js</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>Express.js</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>Mongo DB</p>
         </div>
       </section>
 

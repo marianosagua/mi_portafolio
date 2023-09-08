@@ -76,23 +76,22 @@ export const ProjectsPage = () => {
           <span className="spanHover"></span>
 
           <h6>
-            Stargames
+            Memo Test{" "}
             <span>
-              <a href="https://star-games-store.vercel.app/" target="_blanck">
+              <a href="#" target="_blanck">
                 {boxArrow}
               </a>
-            </span>
+            </span>{" "}
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>E-commerce</p>
-            <p>Sass</p>
-            <p>React</p>
+            <p>SPA</p>
+            <p>React.js</p>
             <p>Firebase</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a href="https://star-games-store.vercel.app/" target="_blanck">
+            <a href="#" target="_blanck">
               {boxArrow}
             </a>
           </div>
@@ -100,56 +99,25 @@ export const ProjectsPage = () => {
 
         <div className="projects__table--rowProject">
           <span className="spanHover"></span>
-          <h6>
-            Pokedex{" "}
-            <span>
-              <a
-                href="https://github.com/MarianoSagua/app_mobile_pokedex"
-                target="_blanck"
-              >
-                {githubIcon}
-              </a>
-            </span>{" "}
-          </h6>
-
-          <div className="projects__table--rowProject--tecnologies">
-            <p>Mobile</p>
-            <p>React Native</p>
-            <p>Android Studio</p>
-            <p>Firebase</p>
-          </div>
-
-          <div className="projects__table--rowProject--links">
-            <a
-              href="https://github.com/MarianoSagua/app_mobile_pokedex"
-              target="_blanck"
-            >
-              {githubIcon}
-            </a>
-          </div>
-        </div>
-
-        <div className="projects__table--rowProject">
-          <span className="spanHover"></span>
 
           <h6>
-            Memo Test{" "}
+            Calendario{" "}
             <span>
-              <a href="https://memory-test-app.vercel.app/" target="_blanck">
+              <a href="#" target="_blanck">
                 {boxArrow}
               </a>
             </span>{" "}
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>Game</p>
-            <p>Sass</p>
-            <p>React</p>
-            <p>Firebase</p>
+            <p>React.js</p>
+            <p>Redux</p>
+            <p>Node.js</p>
+            <p>Mongo DB</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a href="https://memory-test-app.vercel.app/" target="_blanck">
+            <a href="#" target="_blanck">
               {boxArrow}
             </a>
           </div>

@@ -13,7 +13,7 @@ export const PortafolioApp = () => {
       <HomePage />
       {/* <AboutMePage/> */}
       <HabilidadesPage />
-      {/* <ProjectsPage/> */}
+      <ProjectsPage />
       <ContactPage />
     </AppLayout>
   );

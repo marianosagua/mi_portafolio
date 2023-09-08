@@ -56,9 +56,9 @@ export const Menu = () => {
                 Habilidades <span>{arrowLeft}</span>
               </h2>
 
-              {/* <h2 onClick={() => irAlLink("projects")}>
+              <h2 onClick={() => irAlLink("projects")}>
                 Proyectos <span>{arrowLeft}</span>
-              </h2> */}
+              </h2>
 
               <h2 onClick={() => irAlLink("contact")}>
                 Contacto <span>{arrowLeft}</span>
@@ -69,6 +69,8 @@ export const Menu = () => {
               <a href="https://www.linkedin.com/in/mariano-sagua-49785923b/">
                 LINKEDIN
               </a>
+
+              <a href="#">CV</a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
             </div>
@@ -96,9 +98,9 @@ export const Menu = () => {
                 Habilidades <span>{arrowLeft}</span>
               </h2>
 
-              {/* <h2 onClick={() => irAlLink("projects")}>
+              <h2 onClick={() => irAlLink("projects")}>
                 Proyectos <span>{arrowLeft}</span>
-              </h2> */}
+              </h2>
 
               <h2 onClick={() => irAlLink("contact")}>
                 Contacto <span>{arrowLeft}</span>
@@ -109,6 +111,8 @@ export const Menu = () => {
               <a href="https://www.linkedin.com/in/mariano-sagua-49785923b/">
                 LINKEDIN
               </a>
+
+              <a href="#">CV</a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
             </div>
