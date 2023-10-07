@@ -70,7 +70,7 @@ export const Menu = () => {
                 LINKEDIN
               </a>
 
-              <a href="#">CV</a>
+              <a href="https://drive.google.com/file/d/1MO8xpXka3ReIi_Y3B17MzgmzmCw_WQdH/view?usp=sharing">CV</a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
             </div>
@@ -112,7 +112,7 @@ export const Menu = () => {
                 LINKEDIN
               </a>
 
-              <a href="#">CV</a>
+              <a href="https://drive.google.com/file/d/1MO8xpXka3ReIi_Y3B17MzgmzmCw_WQdH/view?usp=sharing">CV</a>
 
               <a href="https://github.com/MarianoSagua">GIT HUB</a>
             </div>

@@ -68,7 +68,7 @@ export const ProjectsPage = () => {
       <section className="projects__table">
         <div className="projects__table--rowTitles">
           <h5>Proyecto</h5>
-          <h5>Caracteristicas</h5>
+          <h5>Tecnologias Usadas</h5>
           <h5>Link</h5>
         </div>
 
@@ -76,22 +76,21 @@ export const ProjectsPage = () => {
           <span className="spanHover"></span>
 
           <h6>
-            Memo Test{" "}
+            Memory Game{" "}
             <span>
-              <a href="#" target="_blanck">
+              <a href="https://memory-test-app.vercel.app/" target="_blanck">
                 {boxArrow}
               </a>
             </span>{" "}
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>SPA</p>
             <p>React.js</p>
             <p>Firebase</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a href="#" target="_blanck">
+            <a href="https://memory-test-app.vercel.app/" target="_blanck">
               {boxArrow}
             </a>
           </div>
@@ -101,9 +100,12 @@ export const ProjectsPage = () => {
           <span className="spanHover"></span>
 
           <h6>
-            Calendario{" "}
+            Tu Calendario{" "}
             <span>
-              <a href="#" target="_blanck">
+              <a
+                href="https://drive.google.com/file/d/13JJvmvLr7ce78C_5Pz12gRl1YF4lqW1w/view?usp=sharing"
+                target="_blanck"
+              >
                 {boxArrow}
               </a>
             </span>{" "}
@@ -111,13 +113,15 @@ export const ProjectsPage = () => {
 
           <div className="projects__table--rowProject--tecnologies">
             <p>React.js</p>
-            <p>Redux</p>
             <p>Node.js</p>
             <p>Mongo DB</p>
           </div>
 
           <div className="projects__table--rowProject--links">
-            <a href="#" target="_blanck">
+            <a
+              href="https://drive.google.com/file/d/13JJvmvLr7ce78C_5Pz12gRl1YF4lqW1w/view?usp=sharing"
+              target="_blanck"
+            >
               {boxArrow}
             </a>
           </div>

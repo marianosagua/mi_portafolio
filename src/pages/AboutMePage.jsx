@@ -1,4 +1,4 @@
-import FotoPerfil from "../images/FotoPerfil.jpg";
+// import FotoPerfil from "../images/FotoPerfil.jpg";
 import { useInView } from "react-intersection-observer";
 
 export const AboutMePage = () => {
@@ -29,7 +29,7 @@ export const AboutMePage = () => {
       </section>
 
       <section className="aboutMe__profile">
-        <img src={FotoPerfil} alt="Foto Perfil" />
+        {/* <img src={FotoPerfil} alt="Foto Perfil" /> */}
 
         <a href="#" className="aboutMe__profile--cv" target="__blank">
           CV

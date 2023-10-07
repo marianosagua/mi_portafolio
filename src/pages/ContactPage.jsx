@@ -11,7 +11,7 @@ export const ContactPage = () => {
 
       <div className="contact__links">
         <a
-          href="https://drive.google.com/file/d/1ivicZwqHXpcat-Hb5ShzrKoNZeDtTXw1/view?usp=sharing"
+          href="https://drive.google.com/file/d/1MO8xpXka3ReIi_Y3B17MzgmzmCw_WQdH/view?usp=sharing"
           target="_blanck"
         >
           Curriculum

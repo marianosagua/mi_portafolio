@@ -50,24 +50,6 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>Bootstrap</p>
-        </div>
-        <div
-          className={
-            inView
-              ? "habilidades__items--item animate__animated animate__fadeInUp"
-              : "habilidades__items--item"
-          }
-        >
-          <p>Tailwind CSS</p>
-        </div>
-        <div
-          className={
-            inView
-              ? "habilidades__items--item animate__animated animate__fadeInUp"
-              : "habilidades__items--item"
-          }
-        >
           <p>Javascript</p>
         </div>
         <div
@@ -115,6 +97,15 @@ export const HabilidadesPage = () => {
         >
           <p>Git Hub</p>
         </div>
+        {/* <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>Pruebas Unitarias</p>
+        </div> */}
         <div
           className={
             inView
