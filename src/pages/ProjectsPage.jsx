@@ -76,30 +76,6 @@ export const ProjectsPage = () => {
           <span className="spanHover"></span>
 
           <h6>
-            Memory Game{" "}
-            <span>
-              <a href="https://memory-test-app.vercel.app/" target="_blanck">
-                {boxArrow}
-              </a>
-            </span>{" "}
-          </h6>
-
-          <div className="projects__table--rowProject--tecnologies">
-            <p>React.js</p>
-            <p>Firebase</p>
-          </div>
-
-          <div className="projects__table--rowProject--links">
-            <a href="https://memory-test-app.vercel.app/" target="_blanck">
-              {boxArrow}
-            </a>
-          </div>
-        </div>
-
-        <div className="projects__table--rowProject">
-          <span className="spanHover"></span>
-
-          <h6>
             Tu Calendario{" "}
             <span>
               <a
@@ -112,8 +88,8 @@ export const ProjectsPage = () => {
           </h6>
 
           <div className="projects__table--rowProject--tecnologies">
-            <p>React.js</p>
-            <p>Node.js</p>
+            <p>React</p>
+            <p>Node</p>
             <p>Mongo DB</p>
           </div>
 

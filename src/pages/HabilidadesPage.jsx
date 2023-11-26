@@ -41,7 +41,7 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>SASS</p>
+          <p>Sass</p>
         </div>
         <div
           className={
@@ -50,7 +50,7 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>Javascript</p>
+          <p>JavaScript</p>
         </div>
         <div
           className={
@@ -59,7 +59,25 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>React.js</p>
+          <p>TypeScript</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>React</p>
+        </div>
+        <div
+          className={
+            inView
+              ? "habilidades__items--item animate__animated animate__fadeInUp"
+              : "habilidades__items--item"
+          }
+        >
+          <p>React Query</p>
         </div>
         <div
           className={
@@ -113,7 +131,7 @@ export const HabilidadesPage = () => {
               : "habilidades__items--item"
           }
         >
-          <p>Node.js</p>
+          <p>Node</p>
         </div>
         <div
           className={
@@ -132,114 +150,6 @@ export const HabilidadesPage = () => {
           }
         >
           <p>Mongo DB</p>
-        </div>
-      </section>
-
-      <section className="habilidades__otrasHabilidades">
-        <h2 className="habilidades__otrasHabilidades--title">
-          Otras Habilidades
-        </h2>
-
-        <div className="habilidades__otros" ref={refTwo}>
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Trabajo en equipo</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Liderazgo</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Proactividad</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Actitud Positiva</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Aprendizaje Constante</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Escucha Activa</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Empatia</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Autodidacta</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Creatividad</p>
-          </div>
-
-          <div
-            className={
-              inViewTwo
-                ? "habilidades__otros--item  animate__animated animate__slideInLeft"
-                : "habilidades__otros--item"
-            }
-          >
-            <p>Analisis de problemas</p>
-          </div>
         </div>
       </section>
     </div>

@@ -59,7 +59,7 @@ export const HomePage = () => {
         <h3 className="homeApp__textInfo--scroll">
           <div className="homeApp__textInfo--scroll--text">
             Scroll para abajo
-            <span>para ver toda mi informacion</span>
+            <span>para ver toda la informacion</span>
           </div>
 
           <div>
@@ -101,7 +101,7 @@ export const HomePage = () => {
             </h3>
           </div>
         </div>
-        
+
         <div className="homeApp__responsive--item">
           <div className="homeApp__responsive--item--itemUno">
             <div className="containerText">
