@@ -79,5 +79,6 @@ La aplicación está optimizada para:
 Mariano Sagua
 
 - Email: marianosagua4343@gmail.com
+- CV: [Curriculum Vitae](https://drive.google.com/file/d/1nq3oQOqg8Q60gBr_TcMFGXfs9OepxPg_/view?usp=sharing)
 - GitHub: [@marianosagua](https://github.com/marianosagua)
 - LinkedIn: [Mariano Sagua](https://www.linkedin.com/in/mariano-sagua-49785923b/)
