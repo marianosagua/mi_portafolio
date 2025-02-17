@@ -9,8 +9,8 @@ const contactItems = [
   },
   {
     icon: <FileText size={24} />,
-    text: "Descargar CV",
-    href: "#",
+    text: "CV",
+    href: "https://drive.google.com/file/d/1nq3oQOqg8Q60gBr_TcMFGXfs9OepxPg_/view?usp=sharing",
   },
   {
     icon: <Github size={24} />,
