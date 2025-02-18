@@ -33,7 +33,7 @@ export const Header = () => {
           </ul>
         </nav>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white cursor-pointer">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -52,7 +52,7 @@ export const Header = () => {
                 <motion.li
                   key={item}
                   whileHover={{ scale: 1.1 }}
-                  className="my-2"
+                  className="my-2 text-white"
                 >
                   <a
                     href={`#${item}`}

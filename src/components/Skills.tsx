@@ -20,6 +20,8 @@ const skills = [
   "Railway",
   "Git",
   "GitHub",
+  "C",
+  "C#",
 ];
 
 export const Skills = () => {
