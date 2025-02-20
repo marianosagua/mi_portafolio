@@ -21,14 +21,14 @@ const projects = [
     link: "https://estudialoweb.com/",
     linkGitHub: "https://github.com/marianosagua/estudialo-frontend.git",
   },
-  {
-    title: "Traductor con IA",
-    description:
-      "Traductor con IA que ofrece traducciones rápidas y precisas en múltiples idiomas, utilizando modelos de lenguaje avanzados de la API de OpenAI para mejorar la comprensión y fluidez.",
-    image: traductorIA,
-    link: "https://ai-translator-nu.vercel.app/",
-    linkGitHub: "https://github.com/marianosagua/AI-translator",
-  },
+  // {
+  //   title: "Traductor con IA",
+  //   description:
+  //     "Traductor con IA que ofrece traducciones rápidas y precisas en múltiples idiomas, utilizando modelos de lenguaje avanzados de la API de OpenAI para mejorar la comprensión y fluidez.",
+  //   image: traductorIA,
+  //   link: "https://ai-translator-nu.vercel.app/",
+  //   linkGitHub: "https://github.com/marianosagua/AI-translator",
+  // },
 ];
 
 export const Projects = () => {
