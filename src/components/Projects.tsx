@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import movie_reservation_system from "../images/MovieReservationSystem.png";
 import estudialo from "../images/Estudialo.png";
+import traductorIA from "../images/TraductorIA.png";
 
 const projects = [
   {
@@ -19,6 +20,14 @@ const projects = [
     image: estudialo,
     link: "https://estudialoweb.com/",
     linkGitHub: "https://github.com/marianosagua/estudialo-frontend.git",
+  },
+  {
+    title: "Traductor con IA",
+    description:
+      "Traductor con IA que ofrece traducciones rápidas y precisas en múltiples idiomas, utilizando modelos de lenguaje avanzados de la API de OpenAI para mejorar la comprensión y fluidez.",
+    image: traductorIA,
+    link: "https://ai-translator-nu.vercel.app/",
+    linkGitHub: "https://github.com/marianosagua/AI-translator",
   },
 ];
 
@@ -62,7 +71,7 @@ export const Projects = () => {
                 <div className="flex justify-start">
                   <a
                     href={project.link}
-                    className="text-blue-400 hover:text-blue-300 text-white underline"
+                    className=" hover:text-blue-300 text-white underline"
                     target="_blank"
                   >
                     <svg
@@ -84,7 +93,7 @@ export const Projects = () => {
                   &nbsp;&nbsp;&nbsp;
                   <a
                     href={project.linkGitHub}
-                    className="text-blue-400 hover:text-blue-300 text-white underline"
+                    className=" hover:text-blue-300 text-white underline"
                     target="_blank"
                   >
                     <svg
