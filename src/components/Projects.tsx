@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,6 @@ interface Project {
 }
 
 export const Projects = () => {
-  const [activeProject, setActiveProject] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -109,8 +108,6 @@ export const Projects = () => {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              onMouseEnter={() => setActiveProject(project.id)}
-              onMouseLeave={() => setActiveProject(null)}
             >
               <Card className="overflow-hidden h-full bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
                 <div className="relative aspect-video overflow-hidden">

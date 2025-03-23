@@ -17,10 +17,10 @@ export const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Inicio", href: "#inicio" },
-    { name: "Proyectos", href: "#proyectos" },
-    { name: "Habilidades", href: "#habilidades" },
-    { name: "Contacto", href: "#contacto" },
+    { name: "Inicio", href: "/" },
+    { name: "Proyectos", href: "/projects" },
+    { name: "Habilidades", href: "/" },
+    { name: "Contacto", href: "/" },
   ];
 
   return (
