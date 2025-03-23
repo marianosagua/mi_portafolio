@@ -2,30 +2,35 @@
 
 ## 📝 Descripción
 
-Este proyecto es un portafolio personal moderno desarrollado con React y TypeScript, que muestra habilidades profesionales, proyectos y datos de contacto. La aplicación está construida con un diseño responsive y animaciones fluidas.
+Este proyecto es un portafolio dinámico y moderno desarrollado con React y TypeScript. La aplicación muestra una amplia gama de habilidades, proyectos destacados y datos de contacto, utilizando animaciones fluidas, un diseño responsive y un modo oscuro avanzado para brindar una experiencia única de usuario.
 
 ## 🚀 Características
 
 - Diseño responsive con Tailwind CSS
-- Animaciones suaves con Motion/Framer Motion
-- Navegación dinámica
-- Modo oscuro integrado
-- Secciones principales:
-  - Home con presentación personal
-  - Listado de habilidades técnicas
-  - Galería de proyectos
-  - Información de contacto
-  - Footer
+- Animaciones y transiciones suaves con Framer Motion y Motion
+- Soporte para modo oscuro y adaptación al tema del sistema
+- Fondo interactivo animado con Three.js (y fallback en caso de fallo)
+- Custom cursor para una experiencia más personalizada
+- Navegación dinámica y secciones bien definidas
+
+### Secciones Principales
+
+- **Inicio:** Presentación personal y resumen de habilidades
+- **Habilidades:** Listado detallado de competencias técnicas
+- **Proyectos:** Galería interactiva de proyectos destacados
+- **Contacto:** Formulario integrado con EmailJS para consultas
+- **Footer:** Información adicional y enlaces a redes sociales
 
 ## 🛠️ Tecnologías Utilizadas
 
-- React 19
-- TypeScript
-- Tailwind CSS
-- Motion/Framer Motion
-- Vite
-- ESLint
-- Lucide React (para iconos)
+- React 19 con TypeScript
+- Tailwind CSS para el diseño y la personalización
+- Framer Motion y Motion para animaciones
+- Three.js para fondos animados
+- Vite como bundler y entorno de desarrollo
+- ESLint para garantizar la calidad del código
+- Lucide React para los iconos
+- EmailJS para el manejo de formularios de contacto
 
 ## 📦 Instalación
 
@@ -48,23 +53,33 @@ npm run build
 ```
 src/
 ├── components/
+│   ├── Contact.tsx
+│   ├── Cursor.tsx
+│   ├── Footer.tsx
 │   ├── Header.tsx
 │   ├── Home.tsx
-│   ├── Skills.tsx
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
 │   ├── Projects.tsx
-│   ├── Contact.tsx
-│   └── Footer.tsx
+│   ├── Skills.tsx
+│   └── ThemeProvider.tsx
+├── lib/
+│   ├── three-background.ts
+│   └── utils.ts
 ├── images/
+├── pages/
+│   ├── HomePage.tsx
+│   └── ProjectsPage.tsx
 ├── App.tsx
 └── main.tsx
 ```
 
 ## 🔧 Scripts Disponibles
 
-- `npm run dev`: Inicia el servidor de desarrollo
-- `npm run build`: Construye la aplicación para producción
-- `npm run lint`: Ejecuta el linter
-- `npm run preview`: Vista previa de la versión de producción
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run build`: Construye la aplicación para producción.
+- `npm run lint`: Ejecuta el linter.
+- `npm run preview`: Vista previa de la versión de producción.
 
 ## 📱 Responsive Design
 
