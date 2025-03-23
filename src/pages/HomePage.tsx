@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Hero, Skills, Footer, Projects, Contact } from "@/components";
+import { Hero, Skills, Footer, Projects, Contact, About } from "@/components";
 
 export const HomePage = () => {
   return (
@@ -11,6 +11,7 @@ export const HomePage = () => {
       transition={{ duration: 0.5 }}
     >
       <Hero />
+      <About />
       <Projects />
       <Skills />
       <Contact />

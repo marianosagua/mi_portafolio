@@ -8,3 +8,4 @@ export * from "./Hero";
 export * from "./Skills";
 export * from "./Footer";
 export * from "./FallbackBackground";
+export * from "./About";
