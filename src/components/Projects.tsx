@@ -1,121 +1,197 @@
-import { motion } from "motion/react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
 import movie_reservation_system from "../images/MovieReservationSystem.png";
 import estudialo from "../images/Estudialo.png";
-import traductorIA from "../images/TraductorIA.png";
+import traductor_ia from "../images/TraductorIA.png";
 
-const projects = [
-  {
-    title: "Sistema de Reservacion de Funciones de Cine",
-    description:
-      "Sistema intuitivo que permite reservar funciones de cine de manera rápida y sencilla, gestionando horarios, películas y asientos en tiempo real.",
-    image: movie_reservation_system,
-    link: "https://movie-reservation-system-frontend.vercel.app/",
-    linkGitHub:
-      "https://github.com/marianosagua/movie-reservation-system-backend.git",
-  },
-  {
-    title: "Estudialo - Generador de Rutas de Aprendizaje con IA",
-    description:
-      "Realizacion del frontend de una aplicación que utiliza IA para diseñar rutas de aprendizaje personalizadas y optimizadas para alcanzar tus objetivos educativos.",
-    image: estudialo,
-    link: "https://estudialoweb.com/",
-    linkGitHub: "https://github.com/marianosagua/estudialo-frontend.git",
-  },
-  {
-    title: "Traductor con IA",
-    description:
-      "Traductor con IA que ofrece traducciones rápidas y precisas en múltiples idiomas, utilizando modelos de lenguaje avanzados de la API de OpenAI para mejorar la comprensión y fluidez.",
-    image: traductorIA,
-    link: "https://ai-translator-nu.vercel.app/",
-    linkGitHub: "https://github.com/marianosagua/AI-translator",
-  },
-];
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+}
 
 export const Projects = () => {
+  const [activeProject, setActiveProject] = useState<number | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const projects: Project[] = [
+    {
+      id: 1,
+      title: "Sistema de Reservacion de Funciones de Cine",
+      description:
+        "Sistema intuitivo que permite reservar funciones de cine de manera rápida y sencilla, gestionando horarios, películas y asientos en tiempo real.",
+      image: movie_reservation_system,
+      tags: ["React", "Node.js", "Express", "PostgreSQL"],
+      liveUrl: "https://movie-reservation-system-frontend.vercel.app/",
+      githubUrl:
+        "https://github.com/marianosagua/movie-reservation-system-backend.git",
+    },
+    {
+      id: 2,
+      title: "Estudialo - Generador de Rutas de Aprendizaje con IA",
+      description:
+        "Realizacion del frontend de una aplicación que utiliza IA para diseñar rutas de aprendizaje personalizadas y optimizadas para alcanzar tus objetivos educativos.",
+      image: estudialo,
+      tags: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
+      liveUrl: "https://estudialoweb.com/",
+      githubUrl: "https://github.com/marianosagua/estudialo-frontend.git",
+    },
+    {
+      id: 3,
+      title: "Traductor con IA",
+      description:
+        "Traductor con IA que ofrece traducciones rápidas y precisas en múltiples idiomas, utilizando modelos de lenguaje avanzados de la API de OpenAI para mejorar la comprensión y fluidez.",
+      image: traductor_ia,
+      tags: ["React", "Node.js", "Cloudflare", "OpenAI"],
+      liveUrl: "https://ai-translator-nu.vercel.app/",
+      githubUrl: "https://github.com/marianosagua/AI-translator",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      },
+    },
+  };
+
   return (
-    <section id="Proyectos" className="py-20 bg-zinc-950">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="text-3xl font-bold mb-8 text-center text-white"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Mis Proyectos
-        </motion.h2>
+    <section id="proyectos" className="py-20 bg-background relative">
+      <div className="container mx-auto px-6">
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          ref={ref}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          {projects.map((project, index) => (
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Proyectos destacados
+          </h2>
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            Una selección de mis trabajos más recientes y destacados en diversos
+            ámbitos y tecnologías.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {projects.map((project) => (
             <motion.div
-              key={index}
-              className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg border border-zinc-800"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              key={project.id}
+              variants={itemVariants}
+              whileHover={{ y: -10 }}
+              onMouseEnter={() => setActiveProject(project.id)}
+              onMouseLeave={() => setActiveProject(null)}
             >
-              <img
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                width={300}
-                height={200}
-                className="w-full"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-xl mb-2 text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
-                <div className="flex justify-start">
-                  <a
-                    href={project.link}
-                    className=" hover:text-blue-300 text-white underline"
-                    target="_blank"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-link"
-                    >
-                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                    </svg>
-                  </a>
-                  &nbsp;&nbsp;&nbsp;
-                  <a
-                    href={project.linkGitHub}
-                    className=" hover:text-blue-300 text-white underline"
-                    target="_blank"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-github"
-                    >
-                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                      <path d="M9 18c-4.51 2-5-2-7-2" />
-                    </svg>
-                  </a>
+              <Card className="overflow-hidden h-full bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-70" />
                 </div>
-              </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-foreground/70 mb-4">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2"
+                      asChild
+                    >
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2"
+                      asChild
+                    >
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="h-4 w-4" />
+                        Code
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full px-8"
+            asChild
+          >
+            <a href="/projects" target="_blank" rel="noopener noreferrer">
+              Ver Todos los Proyectos
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

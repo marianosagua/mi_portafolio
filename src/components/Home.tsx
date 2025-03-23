@@ -3,7 +3,7 @@ import profile_picture from "../images/FotoPerfil.jpg";
 
 export const Home = () => {
   return (
-    <section id="Home" className="py-20 bg-zinc-950">
+    <section id="inicio" className="py-20 bg-zinc-950">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <motion.div
           className="md:w-1/2 mb-8 md:mb-0"
