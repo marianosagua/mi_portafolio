@@ -104,6 +104,13 @@ export const Skills = () => {
       description:
         "Trabajo eficientemente en entornos ágiles con énfasis en la entrega continua.",
     },
+    {
+      title: "Patrones de Diseño",
+      icon: <FileCode className="h-6 w-6 text-indigo-500" />,
+      technologies: "Arquitectura limpia, MVC",
+      description:
+        "Incorporo patrones de diseño para lograr soluciones escalables, mantenibles y robustas en el desarrollo de software.",
+    },
   ];
 
   const containerVariants = {
