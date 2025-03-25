@@ -32,7 +32,7 @@ export const Skills = () => {
       icon: <FileCode className="h-6 w-6 text-yellow-500" />,
       technologies: "HTML, CSS, Sass, React.js",
       description:
-        "Construyo interfaces de usuario responsivas e interactivas usando las características modernas de React y Next.js para lograr un rendimiento óptimo.",
+        "Construyo interfaces de usuario responsivas e interactivas usando las características modernas de React para lograr un rendimiento óptimo.",
     },
     {
       title: "Desarrollo Backend",
@@ -53,7 +53,7 @@ export const Skills = () => {
       icon: <Brain className="h-6 w-6 text-teal-500" />,
       technologies: "OpenAI",
       description:
-        "Integro LLMs en aplicaciones web para generar contenido y analizar texto.",
+        "Integro modelos de inteligencia artificial en aplicaciones web para generar contenido y analizar texto.",
     },
     {
       title: "Despliegue e Infraestructura",
@@ -65,7 +65,7 @@ export const Skills = () => {
     {
       title: "Diseño UI/UX",
       icon: <Palette className="h-6 w-6 text-pink-500" />,
-      technologies: "Tailwind CSS, Material UI, Boostrap",
+      technologies: "Tailwind CSS, Shadcn, Boostrap",
       description:
         "Creo interfaces de usuario bellas e intuitivas utilizando principios y frameworks de diseño modernos.",
     },
