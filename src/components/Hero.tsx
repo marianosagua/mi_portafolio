@@ -22,14 +22,14 @@ export const Hero = () => {
     }
   }, []);
 
-  const scrollToProjects = () => {
-    document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSkills = () => {
+    document.getElementById("habilidades")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 sm:py-0"
     >
       {!threeJsFailed ? (
         <canvas
@@ -43,23 +43,23 @@ export const Hero = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
 
-      <div className="container mx-auto px-6 z-10">
+      <div className="container mx-auto px-4 sm:px-6 z-10">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
               Desarrollador Web
             </span>{" "}
-            <br />
+            <br className="hidden xs:block" />
             Full Stack
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-foreground/80 mb-8"
+            className="text-lg sm:text-xl md:text-2xl text-foreground/80 mb-6 sm:mb-8 px-2 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -71,12 +71,12 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
               size="lg"
-              className="rounded-full px-8 text-lg"
-              onClick={scrollToProjects}
+              className="rounded-full px-6 sm:px-8 text-base sm:text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              onClick={scrollToSkills}
             >
               Ver Mis Habilidades
             </Button>
@@ -84,7 +84,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full px-8 text-lg"
+              className="rounded-full px-6 sm:px-8 text-base sm:text-lg border-primary text-primary hover:bg-primary/10 w-full sm:w-auto"
               asChild
             >
               <Link to="/projects">Mis Proyectos</Link>
@@ -94,7 +94,7 @@ export const Hero = () => {
       </div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -108,10 +108,10 @@ export const Hero = () => {
         <Button
           variant="ghost"
           size="icon"
-          className="rounded-full"
-          onClick={scrollToProjects}
+          className="rounded-full text-primary hover:bg-primary/10"
+          onClick={scrollToSkills}
         >
-          <ArrowDown className="h-6 w-6" />
+          <ArrowDown className="h-5 w-5 sm:h-6 sm:w-6" />
         </Button>
       </motion.div>
     </section>
