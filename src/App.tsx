@@ -1,9 +1,9 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
-import { Navbar, Cursor } from "./components";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Cursor, Navbar } from "./components";
+import { AnimatePresence } from "motion/react";
 import { HomePage, ProjectsPage } from "./pages";
 
-function App() {
+export const App = () => {
   const location = useLocation();
 
   return (
@@ -18,6 +18,4 @@ function App() {
       </AnimatePresence>
     </div>
   );
-}
-
-export default App;
+};

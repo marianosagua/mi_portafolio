@@ -30,7 +30,16 @@ export const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 sm:py-0"
+      style={{
+        backgroundImage: `url('/HeroFondo.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
+      {/* Capa para oscurecer la imagen de fondo */}
+      <div className="absolute inset-0 bg-black/80 -z-30 pointer-events-none select-none" />
+      {/* Fondo de partículas/Three.js */}
       {!threeJsFailed ? (
         <canvas
           ref={canvasRef}
@@ -40,18 +49,17 @@ export const Hero = () => {
       ) : (
         <FallbackBackground />
       )}
-
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background -z-20" />
 
       <div className="container mx-auto px-4 sm:px-6 z-10">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)] text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+            <span>
               Desarrollador Web
             </span>{" "}
             <br className="hidden xs:block" />

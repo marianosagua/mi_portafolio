@@ -3,12 +3,12 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
   Briefcase,
   GraduationCap,
-  Heart,
   ChevronRight,
   ChevronDown,
   FileCode,
   Server,
   Database,
+  User, // Agrega User aquí
 } from "lucide-react";
 import { Button } from "./ui/button";
 import foto_perfil from "../images/FotoPerfil.jpg";
@@ -106,7 +106,7 @@ export const About = () => {
   const tabIcons = {
     experiencia: <Briefcase className="h-5 w-5" />,
     educacion: <GraduationCap className="h-5 w-5" />,
-    personal: <Heart className="h-5 w-5" />,
+    personal: <User className="h-5 w-5" />,
   };
 
   const containerVariants = {

@@ -24,7 +24,7 @@ export const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Sistema de Reservacion de Funciones de Cine",
+      title: "CinemaSpot - Sistema de Reservacion de Funciones de Cine",
       description:
         "Sistema intuitivo que permite reservar funciones de cine de manera rápida y sencilla, gestionando horarios, películas y asientos en tiempo real.",
       image: movie_reservation_system,
@@ -148,7 +148,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        Live Demo
+                        Demo en vivo
                       </a>
                     </Button>
                     <Button
@@ -163,7 +163,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <Github className="h-4 w-4" />
-                        Code
+                        Codigo Fuente
                       </a>
                     </Button>
                   </div>

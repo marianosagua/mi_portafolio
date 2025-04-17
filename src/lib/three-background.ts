@@ -19,6 +19,7 @@ export function init(canvas: HTMLCanvasElement) {
     antialias: true,
     alpha: true,
   });
+  renderer.setClearColor(0x000000, 0); // Fondo transparente
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
