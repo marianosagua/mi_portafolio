@@ -1,69 +1,34 @@
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
-import { init } from "../lib/three-background";
 import { Link } from "react-router-dom";
-import { FallbackBackground } from "./FallbackBackground";
 
 export const Hero = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [threeJsFailed, setThreeJsFailed] = useState(false);
-
-  useEffect(() => {
-    if (canvasRef.current) {
-      try {
-        const cleanup = init(canvasRef.current);
-        return cleanup;
-      } catch (error) {
-        console.error("Three.js initialization failed:", error);
-        setThreeJsFailed(true);
-      }
-    }
-  }, []);
-
   const scrollToSkills = () => {
-    document.getElementById("habilidades")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("habilidades")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 sm:py-0"
-      style={{
-        backgroundImage: `url('/HeroFondo.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
     >
-      {/* Capa para oscurecer la imagen de fondo */}
-      <div className="absolute inset-0 bg-black/80 -z-30 pointer-events-none select-none" />
-      {/* Fondo de partículas/Three.js */}
-      {!threeJsFailed ? (
-        <canvas
-          ref={canvasRef}
-          className="absolute inset-0 w-full h-full -z-10"
-          style={{ display: "block" }}
-        />
-      ) : (
-        <FallbackBackground />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background -z-20" />
-
+      {/* Contenido principal */}
       <div className="container mx-auto px-4 sm:px-6 z-10">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)] text-white"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500 animate-gradient">
               Desarrollador Web
             </span>{" "}
             <br className="hidden xs:block" />
-            Full Stack
+            <span className="text-white">Full Stack</span>
           </motion.h1>
 
           <motion.p

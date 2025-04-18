@@ -139,7 +139,7 @@ export const Skills = () => {
   return (
     <section
       id="habilidades"
-      className="py-20 bg-background relative overflow-hidden"
+      className="py-20 relative overflow-hidden"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -185,21 +185,21 @@ export const Skills = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-300"
+              className="bg-gradient-to-br from-[#23113a]/80 via-[#1a0033]/70 to-[#000000]/80 shadow-xl hover:scale-[1.03] rounded-2xl overflow-hidden transition-all duration-300 backdrop-blur-lg"
             >
               <div className="p-6">
                 <div className="flex items-start gap-4 mb-3">
-                  <div className="p-2 rounded-md bg-background/50">
+                  <div className="p-2 rounded-md bg-background/60 shadow-inner">
                     {skill.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">{skill.title}</h3>
-                    <p className="text-sm text-foreground/60">
+                    <h3 className="text-xl font-bold text-white drop-shadow-md">{skill.title}</h3>
+                    <p className="text-sm text-primary/80 font-semibold">
                       {skill.technologies}
                     </p>
                   </div>
                 </div>
-                <p className="text-foreground/80">{skill.description}</p>
+                <p className="text-foreground/90 font-medium drop-shadow-sm">{skill.description}</p>
               </div>
             </motion.div>
           ))}

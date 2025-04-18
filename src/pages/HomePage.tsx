@@ -4,7 +4,7 @@ import { Hero, Skills, Footer, Projects, Contact, About } from "@/components";
 export const HomePage = () => {
   return (
     <motion.main
-      className="min-h-screen bg-background"
+      className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

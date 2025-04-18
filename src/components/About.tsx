@@ -143,7 +143,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="py-20 bg-background relative overflow-hidden"
+      className="py-20 relative overflow-hidden bg-transparent"
     >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-bl-full -z-10" />
@@ -174,45 +174,39 @@ export const About = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-lg overflow-hidden p-6 sticky top-24"
+              className="bg-gradient-to-br from-[#3a2560]/90 via-[#1a0033]/80 to-[#000000]/90 shadow-2xl hover:scale-[1.03] rounded-2xl overflow-hidden p-6 sticky top-24 border border-primary/30 backdrop-blur-xl transition-all duration-300"
             >
               <div className="flex flex-col items-center mb-6">
-                <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4 border-2 border-primary p-1">
+                <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-primary shadow-lg p-1 bg-background/60">
                   <img
                     src={personalInfo.profileImage || "/placeholder.svg"}
                     alt={personalInfo.name}
                     className="object-cover rounded-full"
                   />
                 </div>
-                <h3 className="text-2xl font-bold">{personalInfo.name}</h3>
-                <p className="text-primary font-medium">{personalInfo.title}</p>
-                <p className="text-foreground/60 text-sm mt-1">
-                  {personalInfo.location}
-                </p>
+                <h3 className="text-2xl font-bold text-white drop-shadow-lg">{personalInfo.name}</h3>
+                <p className="text-primary font-semibold drop-shadow-md">{personalInfo.title}</p>
+                <p className="text-foreground/70 text-sm mt-1">{personalInfo.location}</p>
               </div>
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">
-                    Habilidades Principales
-                  </h4>
+                  <h4 className="text-lg font-semibold mb-2 text-primary/90">Habilidades Principales</h4>
                   <div className="space-y-2">
                     {personalInfo.skills.map((skillGroup) => (
                       <div
                         key={skillGroup.category}
-                        className="rounded-lg border border-primary/10 overflow-hidden"
+                        className="rounded-lg border border-primary/20 overflow-hidden bg-background/40 shadow-inner"
                       >
                         <button
                           onClick={() => toggleSkill(skillGroup.category)}
-                          className="w-full flex items-center justify-between p-3 hover:bg-primary/5 transition-colors"
+                          className="w-full flex items-center justify-between p-3 hover:bg-primary/10 transition-colors"
                         >
                           <div className="flex items-center gap-2">
-                            <div className="p-1.5 rounded bg-primary/10 text-primary">
+                            <div className="p-1.5 rounded bg-primary/20 text-primary shadow-sm">
                               {skillGroup.icon}
                             </div>
-                            <span className="font-medium">
-                              {skillGroup.category}
-                            </span>
+                            <span className="font-medium text-foreground/90">{skillGroup.category}</span>
                           </div>
                           {expandedSkill === skillGroup.category ? (
                             <ChevronDown className="h-4 w-4 text-primary" />
@@ -229,12 +223,12 @@ export const About = () => {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="p-3 pt-0 bg-background/30">
+                              <div className="p-3 pt-0 bg-background/60">
                                 <div className="flex flex-wrap gap-2 pt-3">
                                   {skillGroup.items.map((skill, index) => (
                                     <span
                                       key={index}
-                                      className="px-2 py-1 bg-primary/10 text-primary text-sm rounded-full"
+                                      className="px-2 py-1 bg-primary/20 text-primary font-semibold text-sm rounded-full shadow"
                                     >
                                       {skill}
                                     </span>
@@ -249,7 +243,7 @@ export const About = () => {
                   </div>
                   <Button
                     variant="default"
-                    className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                    className="w-full mt-4 bg-gradient-to-r from-primary to-purple-500 text-primary-foreground font-bold shadow-lg hover:brightness-110 hover:scale-105 transition-all"
                     onClick={() =>
                       document
                         .getElementById("habilidades")
@@ -261,10 +255,10 @@ export const About = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Contacto</h4>
+                  <h4 className="text-lg font-semibold mb-2 text-primary/90">Contacto</h4>
                   <Button
                     variant="outline"
-                    className="w-full border-primary/20 text-primary hover:bg-primary/10 hover:text-primary"
+                    className="w-full border-primary/30 text-primary font-semibold hover:bg-primary/10 hover:text-primary shadow"
                     asChild
                   >
                     <a href={`mailto:${personalInfo.email}`}>
@@ -285,23 +279,23 @@ export const About = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-lg overflow-hidden mb-8"
+              className="bg-gradient-to-br from-[#3a2560]/90 via-[#1a0033]/80 to-[#000000]/90 shadow-2xl border border-primary/30 backdrop-blur-xl rounded-2xl overflow-hidden mb-8 transition-all duration-300"
             >
               <div className="p-6">
-                <p className="text-foreground/80 leading-relaxed mb-6">
+                <p className="text-foreground/90 leading-relaxed mb-6 font-medium drop-shadow">
                   {personalInfo.summary}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm">
+                  <span className="px-3 py-1.5 bg-primary/20 text-primary font-semibold rounded-full text-sm shadow">
                     Solucionador de Problemas
                   </span>
-                  <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm">
+                  <span className="px-3 py-1.5 bg-primary/20 text-primary font-semibold rounded-full text-sm shadow">
                     Detallista
                   </span>
-                  <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm">
+                  <span className="px-3 py-1.5 bg-primary/20 text-primary font-semibold rounded-full text-sm shadow">
                     Aprendiz Continuo
                   </span>
-                  <span className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm">
+                  <span className="px-3 py-1.5 bg-primary/20 text-primary font-semibold rounded-full text-sm shadow">
                     Trabajo en Equipo
                   </span>
                 </div>
@@ -309,18 +303,18 @@ export const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <div className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-lg overflow-hidden">
-                <div className="border-b border-primary/10">
+              <div className="bg-gradient-to-br from-[#3a2560]/90 via-[#1a0033]/80 to-[#000000]/90 shadow-2xl border border-primary/30 backdrop-blur-xl rounded-2xl overflow-hidden transition-all duration-300">
+                <div className="border-b border-primary/20">
                   <div className="flex overflow-x-auto scrollbar-hide">
                     {(["experiencia", "educacion", "personal"] as const).map(
                       (tab) => (
                         <button
                           key={tab}
                           onClick={() => setActiveTab(tab)}
-                          className={`px-6 py-4 flex items-center gap-2 whitespace-nowrap transition-colors ${
+                          className={`px-6 py-4 flex items-center gap-2 whitespace-nowrap transition-colors font-semibold text-base ${
                             activeTab === tab
-                              ? "text-primary border-b-2 border-primary"
-                              : "text-foreground/60 hover:text-foreground/80 hover:bg-primary/5"
+                              ? "text-primary border-b-2 border-primary bg-primary/10 shadow"
+                              : "text-foreground/70 hover:text-primary/90 hover:bg-primary/5"
                           }`}
                         >
                           {tabIcons[tab]}

@@ -54,8 +54,13 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Gradiente visual mejorado: violeta más oscuro en los costados y negro en el centro */
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: radial-gradient(ellipse at 50% 50%, #120026 0%, #000000 60%, #1a0033 100%),
+                linear-gradient(90deg, #1a0033 0%, #000000 50%, #1a0033 100%);
+    background-blend-mode: lighten, normal;
+    min-height: 100vh;
   }
 
   /* Custom scrollbar */

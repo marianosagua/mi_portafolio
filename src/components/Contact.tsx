@@ -72,7 +72,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-background">
+    <section id="contacto" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -99,7 +99,7 @@ export const Contact = () => {
           >
             {contactInfo.map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
+                <Card className="bg-gradient-to-br from-[#23113a]/80 via-[#1a0033]/70 to-[#000000]/80 shadow-xl rounded-2xl overflow-hidden backdrop-blur-lg hover:scale-[1.03] transition-all duration-300 border-none">
                   <CardContent className="p-6">
                     <a
                       href={item.link}
@@ -111,14 +111,14 @@ export const Contact = () => {
                       }
                       rel="noopener noreferrer"
                     >
-                      <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      <div className="p-3 rounded-full bg-background/60 shadow-inner">
                         {item.icon}
                       </div>
                       <div>
                         <h3 className="text-sm font-medium text-foreground/70">
                           {item.title}
                         </h3>
-                        <p className="text-lg font-medium">{item.value}</p>
+                        <p className="text-lg font-medium text-white drop-shadow-md">{item.value}</p>
                       </div>
                     </a>
                   </CardContent>
@@ -133,7 +133,7 @@ export const Contact = () => {
             animate={isInView ? "visible" : "hidden"}
             className="lg:col-span-3"
           >
-            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 h-full">
+            <Card className="bg-gradient-to-br from-[#23113a]/80 via-[#1a0033]/70 to-[#000000]/80 shadow-xl rounded-2xl overflow-hidden backdrop-blur-lg hover:scale-[1.03] transition-all duration-300 h-full border-none">
               <CardContent className="p-6">
                 {isSubmitted ? (
                   <motion.div
@@ -162,7 +162,7 @@ export const Contact = () => {
                           name="name"
                           placeholder="Tu nombre"
                           required
-                          className="bg-background/50"
+                          className="bg-background/50 border-none shadow-none"
                         />
                       </div>
                       <div className="space-y-2">
@@ -175,7 +175,7 @@ export const Contact = () => {
                           type="email"
                           placeholder="Tu correo"
                           required
-                          className="bg-background/50"
+                          className="bg-background/50 border-none shadow-none"
                         />
                       </div>
                     </div>
@@ -188,7 +188,7 @@ export const Contact = () => {
                         name="subject"
                         placeholder="Asunto de tu mensaje"
                         required
-                        className="bg-background/50"
+                        className="bg-background/50 border-none shadow-none"
                       />
                     </div>
                     <div className="space-y-2">
@@ -201,7 +201,7 @@ export const Contact = () => {
                         placeholder="Tu mensaje"
                         rows={6}
                         required
-                        className="bg-background/50 resize-none"
+                        className="bg-background/50 resize-none border-none shadow-none"
                       />
                     </div>
                     <Button

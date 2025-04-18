@@ -79,7 +79,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="proyectos" className="py-20 bg-background relative">
+    <section id="proyectos" className="py-20 relative">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}

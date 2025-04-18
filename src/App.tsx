@@ -7,7 +7,7 @@ export const App = () => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Cursor />
       <Navbar />
       <AnimatePresence mode="wait">
