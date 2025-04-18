@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,9 +19,9 @@ export const Navbar = () => {
 
   const navItems = [
     { name: "Inicio", href: "/" },
-    { name: "Proyectos", href: "/projects" },
-    { name: "Habilidades", href: "/" },
-    { name: "Contacto", href: "/" },
+    { name: "Proyectos", href: "/proyectos" },
+    { name: "Habilidades", href: "/#habilidades" },
+    { name: "Contacto", href: "/#contacto" },
   ];
 
   return (
@@ -41,7 +42,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            Mariano Sagua
+            <Link to={"/"}>Mariano Sagua</Link>
           </motion.div>
 
           <nav className="hidden md:flex space-x-8">

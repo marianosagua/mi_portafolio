@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
@@ -17,10 +17,8 @@ interface Project {
   githubUrl: string;
 }
 
-export const Projects = () => {
+export const ProyectosPage = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   const projects: Project[] = [
     {
       id: 1,
@@ -53,6 +51,7 @@ export const Projects = () => {
       liveUrl: "https://ai-translator-nu.vercel.app/",
       githubUrl: "https://github.com/marianosagua/AI-translator",
     },
+    // Puedes agregar más proyectos aquí siguiendo la misma estructura
   ];
 
   const containerVariants = {
@@ -60,13 +59,13 @@ export const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.12,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 40, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -79,67 +78,77 @@ export const Projects = () => {
   };
 
   return (
-    <section id="proyectos" className="py-20 relative">
-      <div className="container mx-auto px-6">
+    <motion.div
+      className="min-h-screen pt-28 pb-16 bg-transparent"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Proyectos destacados
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-fuchsia-500 animate-gradient drop-shadow-lg">
+            Todos mis proyectos
+          </h1>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Una selección de mis trabajos más recientes y destacados en diversos
-            ámbitos y tecnologías.
+            Explora una galería completa de proyectos web desarrollados con
+            pasión, creatividad y tecnología de vanguardia.
           </p>
         </motion.div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="h-full"
             >
-              <Card className="overflow-hidden h-full bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
+              <Card className="overflow-hidden h-full bg-gradient-to-br from-[#23113a]/90 via-[#1a0033]/80 to-[#000000]/90 border border-primary/30 group shadow-2xl hover:scale-[1.025] hover:shadow-2xl hover:border-primary/60 transition-all duration-300 backdrop-blur-xl flex flex-col">
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="object-cover transition-transform duration-500 hover:scale-110"
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-90" />
+                  <div className="absolute top-4 left-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm">
+                    #{project.id.toString().padStart(2, "0")}
+                  </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-foreground/70 mb-4">
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="text-2xl font-extrabold mb-2 text-white drop-shadow-lg group-hover:text-primary transition-colors duration-200">
+                    {project.title}
+                  </h3>
+                  <p className="text-foreground/80 mb-4 flex-1 text-base leading-relaxed">
                     {project.description}
                   </p>
-
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        className="px-3 py-1 bg-gradient-to-r from-primary/20 via-purple-500/10 to-fuchsia-500/10 text-primary rounded-full text-xs font-semibold shadow border border-primary/20"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 mt-auto">
                     <Button
-                      variant="outline"
+                      variant="default"
                       size="sm"
-                      className="gap-2"
+                      className="gap-2 bg-gradient-to-r from-primary to-purple-500 text-white font-bold shadow hover:brightness-110 hover:scale-105 transition-all"
                       asChild
                     >
                       <a
@@ -154,7 +163,7 @@ export const Projects = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="gap-2"
+                      className="gap-2 border-primary/40 text-primary hover:bg-primary/10 hover:text-primary font-bold"
                       asChild
                     >
                       <a
@@ -163,7 +172,7 @@ export const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <Github className="h-4 w-4" />
-                        Codigo Fuente
+                        Código Fuente
                       </a>
                     </Button>
                   </div>
@@ -172,24 +181,7 @@ export const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <Button
-            size="lg"
-            className="rounded-full px-10 py-3 font-bold text-lg bg-gradient-to-r from-primary via-purple-500 to-fuchsia-500 text-white shadow-xl border border-primary/40 hover:brightness-110 hover:scale-105 hover:shadow-2xl transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary/70 animate-gradient"
-            asChild
-          >
-            <a href="/proyectos" target="_blank" rel="noopener noreferrer">
-              Ver Todos los Proyectos
-            </a>
-          </Button>
-        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 };

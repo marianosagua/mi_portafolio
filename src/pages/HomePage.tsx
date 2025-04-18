@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Hero, Skills, Footer, Projects, Contact, About } from "@/components";
+import { Hero, Skills, Projects, Contact, About } from "@/components";
 
 export const HomePage = () => {
   return (
-    <motion.main
+    <motion.div
       className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -15,7 +15,6 @@ export const HomePage = () => {
       <Projects />
       <Skills />
       <Contact />
-      <Footer />
-    </motion.main>
+    </motion.div>
   );
 };
