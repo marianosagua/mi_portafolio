@@ -13,7 +13,7 @@ export const Home = () => {
         >
           <h2 className="text-4xl font-bold mb-4 text-white">Mariano Sagua</h2>
           <p className="text-xl mb-6 text-gray-400">
-            Soy un desarrollador full stack comprometido en transformar ideas en
+            Soy un desarrollador de software comprometido en transformar ideas en
             soluciones digitales integrales, combinando interfaces intuitivas y
             arquitecturas robustas para experiencias web de alto impacto.
           </p>

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { ArrowDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowDown, Code2, Sparkles, Terminal } from "lucide-react";
 
 export const Hero = () => {
   const scrollToSkills = () => {
@@ -13,59 +12,115 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 sm:py-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 sm:py-0 bg-gradient-to-b from-background via-background/98 to-background"
     >
-      {/* Contenido principal */}
+      {/* Background Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl" />
+      </div>
+
+      {/* Animated Code Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-primary/10 font-mono text-sm"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: Math.random() * 2 + 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            {`<${["div", "span", "code"][i]}>`}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Main Content */}
       <div className="container mx-auto px-4 sm:px-6 z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.h1
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            className="text-center space-y-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500 animate-gradient">
-              Desarrollador Web
-            </span>{" "}
-            <br className="hidden xs:block" />
-            <span className="text-white">Full Stack</span>
-          </motion.h1>
-
-          <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-foreground/80 mb-6 sm:mb-8 px-2 sm:px-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Diseño y creo aplicaciones web escalables y de alta calidad.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button
-              size="lg"
-              className="rounded-full px-6 sm:px-8 text-base sm:text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto"
-              onClick={scrollToSkills}
+            {/* Badge */}
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 backdrop-blur-sm"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Ver Mis Habilidades
-            </Button>
+              <Code2 className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Desarrollador de Software</span>
+            </motion.div>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full px-6 sm:px-8 text-base sm:text-lg border-primary text-primary hover:bg-primary/10 w-full sm:w-auto"
-              asChild
+            {/* Main Title */}
+            <motion.h1
+              className="text-4xl sm:text-5xl md:text-7xl font-bold"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Link to="/projects">Mis Proyectos</Link>
-            </Button>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-primary animate-gradient">
+                Transformando Ideas
+              </span>
+              <br />
+              <span className="text-white">en Experiencias Digitales</span>
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              className="text-lg sm:text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Diseño y desarrollo aplicaciones web modernas, escalables y de alta calidad, 
+              combinando las últimas tecnologías con un enfoque centrado en el usuario.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <Button
+                size="lg"
+                className="rounded-full px-8 text-lg bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 text-white shadow-lg hover:shadow-primary/25 transition-all duration-300"
+                onClick={scrollToSkills}
+              >
+                <Sparkles className="mr-2 h-5 w-5" />
+                Ver Mis Habilidades
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full px-8 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
+                onClick={() => document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <Terminal className="mr-2 h-5 w-5" />
+                Ver Proyectos
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
 
+      {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}

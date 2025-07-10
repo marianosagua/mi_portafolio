@@ -1,5 +1,5 @@
 import { AppLayout } from "@/layout/AppLayout";
-import { HomePage, ProyectosPage } from "@/pages";
+import { HomePage } from "@/pages";
 import { Route, Routes } from "react-router-dom";
 
 export const AppRouter = () => {
@@ -7,7 +7,6 @@ export const AppRouter = () => {
     <AppLayout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/proyectos" element={<ProyectosPage />} />
       </Routes>
     </AppLayout>
   );

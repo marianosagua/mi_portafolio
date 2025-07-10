@@ -69,45 +69,30 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-muted/30;
+    background: rgba(26, 0, 51, 0.2);
+    border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary/30 rounded-full;
+    background: linear-gradient(to bottom, 
+      hsl(262.1 83.3% 57.8% / 0.4),
+      hsl(262.1 83.3% 57.8% / 0.2)
+    );
+    border-radius: 4px;
+    border: 2px solid rgba(26, 0, 51, 0.1);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary/50;
+    background: linear-gradient(to bottom, 
+      hsl(262.1 83.3% 57.8% / 0.6),
+      hsl(262.1 83.3% 57.8% / 0.4)
+    );
   }
 
-  /* Custom cursor styles */
-  html {
-    cursor: none !important;
-  }
-
-  /* Show default cursor on interactive elements for accessibility */
-  a,
-  button,
-  input,
-  textarea,
-  select,
-  [role="button"],
-  [tabindex="0"] {
-    cursor: none !important;
-  }
-
-  /* But show default cursor on small screens where custom cursor might be problematic */
-  @media (max-width: 768px) {
-    html,
-    a,
-    button,
-    input,
-    textarea,
-    select,
-    [role="button"],
-    [tabindex="0"] {
-      cursor: auto !important;
-    }
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(262.1 83.3% 57.8% / 0.4) rgba(26, 0, 51, 0.2);
   }
 
   /* Smooth scrolling */
