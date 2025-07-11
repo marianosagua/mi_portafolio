@@ -109,7 +109,7 @@ export const Contact = () => {
       title: "Descargar CV",
       description: "Mi experiencia profesional",
       icon: <ArrowUpRight className="h-5 w-5" />,
-      link: "#",
+      link: "https://drive.google.com/file/d/1Fcne9h0J_Ik8B0xGD706dGF-_QLOvZK1/view?usp=sharing",
       color: "from-emerald-500 to-green-500",
     },
   ];
@@ -243,6 +243,8 @@ export const Contact = () => {
                       <a
                         key={index}
                         href={action.link}
+                        target={action.title === "Descargar CV" ? "_blank" : undefined}
+                        rel="noopener noreferrer"
                         className="block group/action"
                         aria-label={action.title}
                       >
